@@ -1,0 +1,264 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Uchen', serif;;
+    color: white;
+}
+
+.banner{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),url(./Images/background/turtle.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.navbar{
+    width: 100% ;
+    margin: auto ;
+    padding: 35px 0;
+    display: flex;
+    align-items:center ;
+    justify-content: space-evenly;
+}
+
+.logo{
+    width: 120px;
+    cursor: pointer;
+    margin: 10px;
+    margin-top: 18px;
+    border-right: 20;
+    margin-bottom: -3px;
+}
+
+
+.navbar ul li{
+    list-style: none ;
+    display: inline-block;
+    margin:0px 10px;
+    position: relative;
+}
+
+.navbar ul li a{
+    text-decoration: none;
+    columns: #fff;
+    text-transform: uppercase;
+}
+
+.navbar ul li::after{
+    content: '';
+    height: 3px;
+    width: 0%;
+    background: #9234eb;
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    transition: transform 0.5s ease;
+    transform: scale(0,1);
+}
+.navbar ul li:hover::after{
+    width: 100%;
+    transform: scale(1,1);
+}
+
+.Intro{
+    width: 100%;
+    position: relative;
+    transform: translateY(-50%);
+    text-align:left;
+    color: aqua;
+    margin-top: 12%;
+}
+
+.Intro h1{
+    font-size: 50px;
+    margin-left: 28px;
+    color: aqua;
+    text-align:center;
+}
+
+.Intro p{
+    margin: 10px 30px 10px 30px;
+    font-weight: 50;
+    line-height: 28px;
+    font-size: 25px;
+    color: aquamarine;
+    text-align: left;
+}
+
+.main-image{
+    position: absolute;
+    margin-top: 2%;
+    margin-left: 18%;
+    justify-items: center;
+    border: 2px solid black;
+    display: inline-flex;
+    padding: 1px;  
+    width: fit-content;
+}
+
+.main-image img{
+    position: absolute;
+    border: 2px solid black;
+}
+
+video{
+    position: relative;
+    margin-top: 30%;
+    margin-bottom: -43%;
+    margin-left: 20%;
+}
+
+.sub1{
+    margin-top: 48%;
+    position: relative;
+    border: 2px solid black;
+    display: inline-block;
+    padding: 25px;
+    background-color: teal;
+      
+}
+
+.sub1 h2{
+    color:white;
+    text-align: center;
+    font-size: 40px;
+    margin-bottom: -30px;
+}
+
+.sub1 p{
+    text-align: center;
+    justify-content: center;
+    color:  white;
+    line-height: 0.8cm;
+    padding: 60px;
+    font-size: 20px;
+}
+
+.sub2 img{
+   margin: 5px;
+    float: right;
+    margin-top: 200px;
+}
+
+.sub2 h2{
+    color: black;
+    text-align: center;
+    font-size: 40PX;
+    margin-top: 50PX;
+    margin-bottom: 20PX;
+    margin-left: 20PX;
+}
+
+.sub2 p{
+    color: black;
+    text-align: justify;
+    margin-left: 20PX;
+    margin-right: 600px;
+    font-size: 20px;
+}
+
+
+@media only screen and (min-width: 1920px)
+{
+    .Intro{
+        margin-top: 8%;
+    }
+    video{
+        width: 70%;
+        margin-left: 12%;
+        margin-top: 8%;
+    }
+    .sub2 img{
+        margin-top: 60px;
+     }
+     .Intro h1{
+        margin-top: 5%;
+    }
+
+}
+.footer{
+    margin-top: 150px;
+    width: 80%;
+    padding: 100px 10%;
+    background: #333;
+    color: #efefef;
+    display: flex;
+}
+.footer div{
+    text-align: center;
+}
+.col-2{
+    flex-grow: 2;
+    display: block;
+}
+.footer div h3{
+    font-weight: 300;
+    margin-bottom: 30px;
+    letter-spacing: 1px;
+}
+.col-1 a{
+    display: block;
+    text-decoration: none;
+    color: #efefef;
+    margin-bottom: 10px;
+}
+form input{
+    width: 400px;
+    height: 45px;
+    border-radius: 4px;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    outline: none;
+    border: none;
+}
+form button{
+     background: transparent;
+     border: 2px solid #fff;
+     color: #fff;
+     border-radius: 30px;
+     padding: 10px 30px;
+}
+
+.social-icons{
+    margin-top: 30px;
+}
+.social-icons i{
+    font-size: 22px;
+    margin: 10px;
+    cursor: pointer;
+}
+
+@media (max-width: 1000px){  
+    .banner{
+        width: 100%;
+        background-image: none;
+        height: 50%;
+        background: blue;
+    }
+    .Intro{
+        width: 100%;
+        position: absolute;
+        margin-top: 200%;
+    }
+    .navbar{
+        width: 65%;
+        text-align: center;
+        margin-top: -2%;
+    }
+    .navbar ul li{
+        padding: 10px;
+    }
+    .main-image img{
+        width: 80%;
+        height: 70%;
+        position: absolute;
+    }
+    .navbar ul li:hover .sub-menu ul li{
+        position: relative;
+    }
+    .col-2{
+        display: none;
+    }
+}

@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./Tickets.css" type="text/css">
+    <script src="https://kit.fontawesome.com/c4254e24a8.js"  crossorigin="anonymous"></script>
+    <link rel="icon" href="./Images/favicon/favicon.ico" type="image/x-icon">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.7/css/all.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <title>Buy Tickets</title>
+
+</head>
+    <!--navigation bar-->
+    <nav>
+        <div class="nav-bar">
+                <i class='fas fa-bars sidebarOpen'></i>
+                <h1 class="head navHead">Buy Tickets</h1>
+            <div class="menu">
+
+                <div class="logo-toggle">
+                    <h1 class="head">Buy Tickets</h1>
+                    <i class='bx bx-x siderbarClose'></i>
+                </div>
+
+                <ul class="nav-links">
+                    <li><a href="./Tickets.html">Tickets</a></li>
+                    <li><a href="./Details.html">Details</a></li>
+                    <li><a href="./Payment.html">Payment</a></li>
+                    <li><a href="#">Confirmation</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+<body>
+
+        <!--visiting date-->
+    <div class="theDate">
+        <h1>When do you plan to visit?</h1>
+    <div class="date">
+        <input type="date" id="datePicker" onchange="displayDate()">
+    </div>
+    </div>
+
+    <!--category selection-->
+
+    <form id="ticketForm">
+        <h2>Ticket Categories</h2>
+        <div class="ticket-category">
+            <label for="slAdult">SL Adult:</label>
+            <input type="number" id="slAdult" value="0" min="0">
+        </div>
+        <div class="ticket-category">
+            <label for="slChild">SL Child:</label>
+            <input type="number" id="slChild" value="0" min="0">
+        </div>
+        <div class="ticket-category">
+            <label for="foreignerAdult">Foreigner Adult:</label>
+            <input type="number" id="foreignerAdult" value="0" min="0">
+        </div>
+        <div class="ticket-category">
+            <label for="foreignerChild">Foreigner Child:</label>
+            <input type="number" id="foreignerChild" value="0" min="0">
+        </div>
+        <div class="ticket-category">
+            <label for="infant">Infant:</label>
+            <input type="number" id="infant" value="0" min="0">
+        </div>
+    </form>
+    
+    <!-- Time slots -->
+
+    <form>
+       <div class="select">
+        <h2>Select the visiting hour</h2>
+        <p> (Please hold ctrl and select for multiple selection)</p>
+        <div class="timeframe-option">
+            <select id="timeframe" onclick="selectfun()" multiple>
+                <option value="" selected class="clrd" disabled>Select Your Visiting Hour</option>
+                <option value="1. 07.00 am - 08.00 am">07.00 am - 08.00 am</option>
+                <option value="1. 08.00 am - 09.00 am">08.00 am - 09.00 am</option>
+                <option value="1. 09.00 am - 10.00 am">09.00 am - 10.00 am</option>
+                <option value="1. 10.00 am - 11.00 am(peak)">10.00 am - 11.00 am(peak)</option>
+                <option value="1. 11.00 am - 12.00 pm(peak)">11.00 am - 12.00 pm(peak)</option>
+                <option value="1. 12.00 am - 01.00 pm(peak)">12.00 am - 01.00 pm(peak)</option>
+                <option value="1. 01.00 pm - 02.00 pm">01.00 pm - 02.00 pm</option>
+                <option value="1. 02.00 pm - 03.00 pm">02.00 pm - 03.00 pm</option>
+                <option value="1. 03.00 pm - 04.00 pm(peak)">03.00 pm - 04.00 pm(peak)</option>
+                <option value="1. 04.00 pm - 05.00 pm(peak)">04.00 pm - 05.00 pm(peak)</option>
+                <option value="1. 05.00 pm - 06.00 pm(peak)">05.00 pm - 06.00 pm(peak)</option>
+            </select>
+        </div>
+       </div>  
+
+    <!--duration info table-->
+
+    <table class="table">
+        <thead>
+            <th>Visitor type</th>
+            <th>Hour type</th>
+            <th>Charge</th>
+        </thead>
+        <tbody>
+            <tr>
+                <td data-label="Visitor type">Foreigner Adult </td>
+                <td data-label="Hour type">Normal </td>
+                <td data-label="charge">10 USD</td>
+            </tr>
+
+            <tr>
+                <td data-label="Visitor type">Foreigner Adult </td>
+                <td data-label="Hour type">Peak </td>
+                <td data-label="charge">13 USD</td>
+            </tr>
+
+            <tr>
+                <td data-label="Visitor type">Foreigner Child </td>
+                <td data-label="Hour type">Normal </td>
+                <td data-label="charge">5 USD</td>
+            </tr>
+
+            <tr>
+                <td data-label="Visitor type">Foreigner Child </td>
+                <td data-label="Hour type">Peak </td>
+                <td data-label="charge">8 USD</td>
+            </tr>
+
+            <tr>
+                <td data-label="Visitor type">SL Adult </td>
+                <td data-label="Hour type">Normal </td>
+                <td data-label="charge">4 USD</td>
+            </tr>
+
+            <tr>
+                <td data-label="Visitor type">SL Adult </td>
+                <td data-label="Hour type">Peak </td>
+                <td data-label="charge">6 USD</td>
+            </tr>
+
+            <tr>
+                <td data-label="Visitor type">SL Child</td>
+                <td data-label="Hour type">Normal </td>
+                <td data-label="charge">2 USD</td>
+            </tr>
+
+            <tr>
+                <td data-label="Visitor type">SL Child</td>
+                <td data-label="Hour type">Peak </td>
+                <td data-label="charge">3 USD</td>
+            </tr>
+        </tbody>
+    </table>
+    </form> 
+    
+    <!--Summary Table-->
+
+    <table class="sumtab">
+        <tbody>
+            <tr>
+                <td>Date</td>
+                <td id="datec1">-</td>
+                <td id="datec2"></td>
+            </tr>
+
+            <tr>
+                <td>Time</td>
+                <td id="timec1">-</td>
+                <td id="timec2">07.00 am to 08.00 am</td>
+            </tr>
+
+            <tr>
+                <td>Duration</td>
+                <td id="durc1">-</td>
+                <td id="durc2">1 hrs ( 01 Normal : 00 Peak)</td>
+            </tr>
+
+            <tr class="drkr">
+                <th>Category</th>
+                <th>No of Tickets</th>
+                <th>Charges</th>
+            </tr>
+
+            <tr>
+                <td id="sadultc1">SL Adult</td>
+                <td id="sadultc2"></td>
+                <td id="sadultc3">$10</td>
+            </tr>
+
+            <tr>
+                <td id="schildc1">SL Child</td>
+                <td id="schildc2"></td>
+                <td id="schildc3"></td>
+            </tr>
+
+            <tr>
+                <td id="fadultc1">Foreigner Adult</td>
+                <td id="fadultc2"></td>
+                <td id="fadultc3"></td>
+            </tr>
+
+            <tr>
+                <td id="fchildc1">Foreigner Child</td>
+                <td id="fchildc2"></td>
+                <td id="fchildc3"></td>
+            </tr>
+
+            <tr>
+                <td id="inf1">Infant</td>
+                <td id="inf2"></td>
+                <td id="inf3">Free</td>
+            </tr>
+
+            <tr class="drkr">
+                <th id="tot1">Total Payable</th>
+                <th id="tot2">=</th>
+                <th id="tot3">$10</th>
+            </tr>
+        </tbody>
+    </table>
+
+
+    
+    <div class="continue">
+        <p><button><a href="./Details.html">Continue with Purchase</a></button></p>
+    </div>
+
+
+
+    <script src="./Tickets.js"></script>
+</body>
+
+<div class="footer">
+    <div class="col-1">
+        <h3>USEFUL LINKS</h3>
+        <a href="#">About</a>
+        <a href="#">Services</a>
+        <a href="#">Contact</a>
+        <a href="#">Shop</a>
+        <a href="#">Blog</a>
+    </div>
+    <div class="col-2">
+        <h3>NEWSLETTER</h3>
+        <form>
+            <input type="text" placeholder="Your Email Address" required class="ftin">
+            <br>
+            <button type="submit" class="ftbtn">SUBMIT</button>
+        </form>
+    </div>
+    <div class="col-3">
+        <h3>CONTACT</h3>
+        <p>123, Sri lanka<br>hatchery</p>
+        <div class="social-icons">
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-twitter"></i>
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-behance"></i>
+        </div>
+        
+    </div>
+</div>
+
+</html>

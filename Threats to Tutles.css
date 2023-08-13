@@ -1,0 +1,203 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Uchen', serif;;
+    color: white;
+}
+
+.banner{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),url(./Images/Threats.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.navbar{
+    width: 100% ;
+    margin: auto ;
+    padding: 40px 0;
+    display: flex;
+    align-items:center ;
+    justify-content: space-evenly;
+}
+
+.logo{
+    width: 120px;
+    cursor: pointer;
+    margin: 10px;
+    margin-top: 18px;
+    border-right: 20;
+    margin-bottom: -3px;
+}
+
+.navbar ul li{
+    list-style: none ;
+    display: inline-block;
+    margin:-5px 8px;
+    position: relative;
+    font-size: 20px;
+}
+
+.navbar ul li a{
+    text-decoration: none;
+    columns: #fff;
+    text-transform: uppercase;
+    font-size: 16px;
+}
+
+.navbar ul li::after{
+    content: '';
+    height: 3px;
+    width: 0%;
+    background: #9234eb;
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    transition: transform 0.5s ease;
+    transform: scale(0,1);
+}
+.navbar ul li:hover::after{
+    width: 100%;
+    transform: scale(1,1);
+    
+}
+
+.Intro h1{
+    padding: 10px;
+    text-align: center;
+    color: #e1eb34;
+    font-size: 30px;
+}
+.Intro p{
+    padding: 20px;
+    font-size: 25px;
+    text-align: center;
+    line-height: 37px;
+    color: #eba834;
+}
+
+.container{
+    width: 95%;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.box{
+    width:400px;
+    margin: 0 10px;
+    box-shadow: 0 0 20px 2px rgba(0, 0, 0, .1);
+    transition: 1s;
+}
+
+.box img{
+    display: block;
+    width: 100%;
+    border-radius: 5px;
+    transition-duration: 0.5s;
+}
+
+.box :hover{
+    transform: scale(1.3);
+    z-index: 2;
+}
+
+.threats{
+    padding: 50px;
+}
+
+.threats h2{
+    color: black;
+    text-align: center;
+    font-size: 45px;
+    margin-bottom: 20px;
+}
+
+.prevention li{
+    padding: 10px;
+    color: black;
+    text-align: justify;
+    font-size: 30px;
+    justify-content: left;
+    margin-left: 10px;
+}
+.num li p b{
+    padding: 10px;
+    color: black;
+    text-align: justify;
+    font-size: 30px;
+    justify-content: left;
+    margin-left: 10px;
+}
+
+.conversation p video{
+    width: 70%;
+    height: 40%;
+    margin: 0 15%;
+    
+}
+
+.footer{
+    margin-top: 150px;
+    width: 80%;
+    padding: 100px 10%;
+    background: #333;
+    color: #efefef;
+    display: flex;
+}
+.footer div{
+    text-align: center;
+}
+.col-2{
+    flex-grow: 2;
+}
+.footer div h3{
+    font-weight: 300;
+    margin-bottom: 30px;
+    letter-spacing: 1px;
+}
+.col-1 a{
+    display: block;
+    text-decoration: none;
+    color: #efefef;
+    margin-bottom: 10px;
+}
+form input{
+    width: 400px;
+    height: 45px;
+    border-radius: 4px;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    outline: none;
+    border: none;
+}
+form button{
+     background: transparent;
+     border: 2px solid #fff;
+     color: #fff;
+     border-radius: 30px;
+     padding: 10px 30px;
+}
+
+.social-icons{
+    margin-top: 30px;
+}
+.social-icons i{
+    font-size: 22px;
+    margin: 10px;
+    cursor: pointer;
+}
+
+@media only screen and (min-width: 1920px) {
+    .container{
+        width: 95%;
+        margin: 200px auto;
+    }
+    .logo{
+        width: 30px;
+        height: 10px;
+    }
+}

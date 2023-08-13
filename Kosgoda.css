@@ -1,0 +1,243 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Uchen', serif;;
+    color: white;
+}
+
+.banner{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),url(./Images/background/kosgoda.png);
+    background-size: cover;
+    background-position: center;
+}
+
+.navbar{
+    width: 100% ;
+    margin: auto ;
+    padding: 35px 0;
+    display: flex;
+    align-items:center ;
+    justify-content: space-evenly;
+    margin-bottom: -100px;
+}
+
+.logo{
+    width: 120px;
+    cursor: pointer;
+    margin: 10px;
+    margin-top: 18px;
+    border-right: 20;
+    margin-bottom: -3px;
+}
+
+.navbar ul li{
+    list-style: none ;
+    display: inline-block;
+    margin:0px 10px;
+    position: relative;
+}
+
+.navbar ul li a{
+    text-decoration: none;
+    columns: #fff;
+    text-transform: uppercase;
+}
+
+.navbar ul li::after{
+    content: '';
+    height: 3px;
+    width: 0%;
+    background: #9234eb;
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    transition: transform 0.5s ease;
+    transform: scale(0,1);
+}
+.navbar ul li:hover::after{
+    width: 100%;
+    transform: scale(1,1);
+}
+
+.head h1{
+    margin-top: 6%;
+    margin-bottom: -5%;
+    text-align: center;
+    font-size: 40px;
+    color: #03f0fc;
+    text-decoration: underline;
+}
+
+.section{
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.slider{
+    width: 800px;
+    height: 500px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.slide{
+    width: 500%;
+    height: 500px;
+    display: flex;
+}
+
+
+.slide input{
+    display: none;
+}
+.st{
+    width: 20%;
+    transition: 2s;
+}
+.st img{
+    width: 800px;
+    height: 500px;
+}
+.nav-m{
+    position: absolute;
+    width: 800px;
+    margin-top: -40px;
+    justify-content: center;
+    display: flex;
+}
+.m-btn{
+    border: 2px solid #23e3c2;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
+}
+.m-btn:not(:last-child){
+    margin-right: 30px;
+}
+.m-btn:hover{
+    background-color: #23e3c2;
+}
+#radio1:checked~.first{
+    margin-left: 0;
+}
+#radio2:checked~.first{
+    margin-left: -20%;
+}
+#radio3:checked~.first{
+    margin-left: -40%;
+}
+#radio4:checked~.first{
+    margin-left: -60%;
+}
+#radio5:checked~.first{
+    margin-left: -80%;
+}
+#radio6:checked~.first{
+    margin-left: -100%;
+}
+.nav-auto{
+    position: absolute;
+    width: 800px;
+    margin-top: 460px;
+    display: flex;
+    justify-content: center;
+}
+.nav-auto div{
+    border: 2px solid #23e3c2;
+    padding: 5px;
+    border-radius: 20px;
+    transition: 1s;
+}
+.nav-auto div:not(:last-child){
+    margin-right: 30px;
+    justify-content: center;
+}
+#radio1:checked ~ .nav-auto .a-b1{
+    background-color: #23e3c2;
+}
+#radio2:checked ~ .nav-auto .a-b2{
+    background-color: #23e3c2;
+}
+#radio3:checked ~ .nav-auto .a-b3{
+    background-color: #23e3c2;
+}
+#radio4:checked ~ .nav-auto .a-b4{
+    background-color: #23e3c2;
+}
+#radio5:checked ~ .nav-auto .a-b5{
+    background-color: #23e3c2;
+}
+#radio6:checked ~ .nav-auto .a-b6{
+    background-color: #23e3c2;
+}
+
+.About p{
+    color: darkslategrey;
+    padding: 20px;
+    justify-content: center;
+    font-size: 25px;
+    text-align: center;
+    margin: 10px 50px;
+    font-family: fantasy;
+}
+
+.map p{
+    text-align: center;
+}
+
+.footer{
+    margin-top: 150px;
+    width: 80%;
+    padding: 100px 10%;
+    background: #333;
+    color: #efefef;
+    display: flex;
+}
+.footer div{
+    text-align: center;
+}
+.col-2{
+    flex-grow: 2;
+}
+.footer div h3{
+    font-weight: 300;
+    margin-bottom: 30px;
+    letter-spacing: 1px;
+}
+.col-1 a{
+    display: block;
+    text-decoration: none;
+    color: #efefef;
+    margin-bottom: 10px;
+}
+form input{
+    width: 400px;
+    height: 45px;
+    border-radius: 4px;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    outline: none;
+    border: none;
+}
+form button{
+     background: transparent;
+     border: 2px solid #fff;
+     color: #fff;
+     border-radius: 30px;
+     padding: 10px 30px;
+}
+
+.social-icons{
+    margin-top: 30px;
+}
+.social-icons i{
+    font-size: 22px;
+    margin: 10px;
+    cursor: pointer;
+}

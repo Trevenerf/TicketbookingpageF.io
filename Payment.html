@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./Payment.css" type="text/css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="icon" href="./Images/favicon/favicon.ico" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/c4254e24a8.js"  crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.7/css/all.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <title>Buy Tickets</title>
+
+</head>
+    <!--navigation bar-->
+    <nav>
+        <div class="nav-bar">
+                <i class='fas fa-bars sidebarOpen'></i>
+                <h1 class="head navHead">Buy Tickets</h1>
+            <div class="menu">
+
+                <div class="logo-toggle">
+                    <h1 class="head">Buy Tickets</h1>
+                    <i class='bx bx-x siderbarClose'></i>
+                </div>
+
+                <ul class="nav-links">
+                    <li><a href="./Tickets.html">Tickets</a></li>
+                    <li><a href="./Details.html">Details</a></li>
+                    <li><a href="#">Payment</a></li>
+                    <li><a href="./Confirmation.html">Confirmation</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+<body>
+    
+    <!--Summary Table-->
+
+    <h1>Summary Table</h1>
+
+    <table class="sumtab">
+        <tbody>
+            <tr>
+                <td>Date</td>
+                <td id="datec1">-</td>
+                <td id="datec2" ></td>
+            </tr>
+
+            <tr>
+                <td>Time</td>
+                <td id="timec1">-</td>
+                <td id="timec2">1. 07.00 am to 08.00 am</td>
+            </tr>
+
+            <tr>
+                <td>Duration</td>
+                <td id="durc1">-</td>
+                <td id="durc2"></td>
+            </tr>
+
+            <tr class="drkr">
+                <th>Category</th>
+                <th>No of Tickets</th>
+                <th>Charges</th>
+            </tr>
+
+            <tr>
+                <td id="sadultc1">SL Adult</td>
+                <td id="sadultc2"></td>
+                <td id="sadultc3"></td>
+            </tr>
+
+            <tr>
+                <td id="schildc1">SL Child</td>
+                <td id="schildc2"></td>
+                <td id="schildc3"></td>
+            </tr>
+
+            <tr>
+                <td id="fadultc1">Foreigner Adult</td>
+                <td id="fadultc2">1</td>
+                <td id="fadultc3"></td>
+            </tr>
+
+            <tr>
+                <td id="fchildc1">Foreigner Child</td>
+                <td id="fchildc2"></td>
+                <td id="fchildc3"></td>
+            </tr>
+
+            <tr>
+                <td id="inf1">Infant</td>
+                <td id="inf2"></td>
+                <td id="inf3">Free</td>
+            </tr>
+
+            <tr class="drkr">
+                <th id="tot1">Total Payable</th>
+                <th id="tot2">=</th>
+                <th id="tot3"></th>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="det">    
+        <h1>Payment Details</h1>
+    </div>
+
+    <div class="container">
+        <form id="paymentForm">
+          <input type="text" id="cardNumber" placeholder="Card Number" required>
+          <input type="date" id="expiryDate" placeholder="Expiry Date" required>
+          <input type="text" id="cvc" placeholder="CVC / CVV" required>
+          <input type="text" id="nameOnCard" placeholder="Name on Card" required>
+          <button type="button" id="payButton">Pay Amount</button>
+        </form>
+      </div>
+
+
+    <script src="./Payment.js"></script>
+
+</body>
+
+<div class="footer">
+    <div class="col-1">
+        <h3>USEFUL LINKS</h3>
+        <a href="#">About</a>
+        <a href="#">Services</a>
+        <a href="#">Contact</a>
+        <a href="#">Shop</a>
+        <a href="#">Blog</a>
+    </div>
+    <div class="col-2">
+        <h3>NEWSLETTER</h3>
+        <form>
+            <input type="text" placeholder="Your Email Address" required class="ftin">
+            <br>
+            <button type="submit" class="ftbtn">SUBMIT</button>
+        </form>
+    </div>
+    <div class="col-3">
+        <h3>CONTACT</h3>
+        <p>123, Sri lanka<br>hatchery</p>
+        <div class="social-icons">
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-twitter"></i>
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-behance"></i>
+        </div>
+        
+    </div>
+</div>
+
+</html>

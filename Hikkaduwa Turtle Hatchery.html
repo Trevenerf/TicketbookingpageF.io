@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TURTLE HATCHERY IN SRI LANKA</title>
+    <link rel="icon" href="./Images/favicon/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./Hikkaduwa Turtle Hatchery.css" type="text/css">
+    <script src="https://kit.fontawesome.com/c4254e24a8.js"  crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="banner">
+        <img src="./logo.webp" class="logo" width="10%">
+        <div class="navbar">
+            <ul>
+                <li><a href="./home.html">Home</a></li>
+                <li><a href="./Turtle categories.html" >Turtle Categories</a></li>
+                <li><a href="#">Hikkaduwa Turtle Hatchery</a></li>
+                <li><a href="./Threats to Turtles.html">Threats to Turtles</a></li>
+                <li><a href="./Other hactheries.html">Other Turtle Hatcheries</a></li>
+                <li><a href="./Purchase and Donate.html">Purchase And Donate</a></li>
+            </ul>
+        </div>
+        <div class="Hikkaduwa">
+            <h1>
+                Hikkaduwa Turtle Hatchery (Sri Lanka)
+            </h1>
+            <p>About 2 km north of Hikkaduwa, on the beach, is a place called Turtle Hatchery. The hatchery is a tiny, private research facility that works to preserve marine turtle species that are in danger of extinction. It provides a selected exhibition of turtle eggs and shows how turtles mature over time. There are some locations where, for an additional cost, you can also get the chance to release newborn turtles into the huge ocean. The months of March through April are the finest for visiting and viewing the turtles.</p>
+
+            <img src="./Images/Hikkaduwa/1.jpg" alt="">
+        </div>
+    </div>
+
+    <section class="section">
+        <div class="slider">
+            <div class="slide">
+                <input type="radio" name="radio btn" id="radio1">
+                <input type="radio" name="radio btn" id="radio2">
+                <input type="radio" name="radio btn" id="radio3">
+                <input type="radio" name="radio btn" id="radio4">
+                <input type="radio" name="radio btn" id="radio5">
+                <input type="radio" name="radio btn" id="radio6">
+
+                <div class="st first">
+                    <img src="./Images/Hikkaduwa/2.jpg" alt="">
+                </div>
+                <div class="st">
+                    <img src="./Images/Hikkaduwa/3.jpg" alt="">
+                </div>
+                <div class="st">
+                    <img src="./Images/Hikkaduwa/4.jpg" alt="">
+                </div>
+                <div class="st">
+                    <img src="./Images/Hikkaduwa/5.jpg" alt="">
+                </div>
+                <div class="st">
+                    <img src="./Images/Hikkaduwa/6.jpg" alt="">
+                </div>
+                <div class="st">
+                    <img src="./Images/Hikkaduwa/7.jpg" alt="">
+                </div>
+
+                <div class="nav-auto">
+                    <div class="a-b1"></div>
+                    <div class="a-b2"></div>
+                    <div class="a-b3"></div>
+                    <div class="a-b4"></div>
+                    <div class="a-b5"></div>
+                    <div class="a-b6"></div>
+                </div>
+            </div>
+
+            <div class="nav-m">
+                <label for="radio1" class="m-btn"></label>
+                <label for="radio2" class="m-btn"></label>
+                <label for="radio3" class="m-btn"></label>
+                <label for="radio4" class="m-btn"></label>
+                <label for="radio5" class="m-btn"></label>
+                <label for="radio6" class="m-btn"></label>
+            </div>
+
+        </div>
+    </section>
+    <script type="text/javascript">
+        setInterval(function(){
+            document.getElementById('radio' + counter).checked=true;
+            counter++;
+            if(counter > 4){
+                counter=1;
+            }
+        },5000);
+    </script>
+
+    <div class="map">
+        <p><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.7515779820146!2d80.08787647572032!3d6.164014627234946!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae182a9ecb0c635%3A0xbd3561821dfbe76b!2sSea%20Turtle%20Hatchery%20%26%20Rescue%20Center!5e0!3m2!1sen!2slk!4v1684991142792!5m2!1sen!2slk" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></p>
+    </div>
+    
+    <!--button to tickets page-->
+    <div class="book">
+        <a href="./Tickets.html">
+            <button>Book Now</button>
+        </a>
+    </div>
+
+
+</body>
+<div class="footer">
+    <div class="col-1">
+        <h3>USEFUL LINKS</h3>
+        <a href="#">About</a>
+        <a href="#">Services</a>
+        <a href="#">Contact</a>
+        <a href="#">Shop</a>
+        <a href="#">Blog</a>
+    </div>
+    <div class="col-2">
+        <h3>NEWSLETTER</h3>
+        <form>
+            <input type="text" placeholder="Your Email Address" required>
+            <br>
+            <button type="submit">SUBMIT</button>
+        </form>
+    </div>
+    <div class="col-3">
+        <h3>CONTACT</h3>
+        <p>123, Sri lanka<br>hatchery</p>
+        <div class="social-icons">
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-twitter"></i>
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-behance"></i>
+        </div>
+        
+    </div>
+</div>
+</html>
